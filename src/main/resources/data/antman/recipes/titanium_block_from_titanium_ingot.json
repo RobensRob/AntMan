@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "antman:titanium_ingot"
+    }
+  },
+  "result": {
+    "id": "antman:titanium_block",
+    "count": 1
+  }
+}

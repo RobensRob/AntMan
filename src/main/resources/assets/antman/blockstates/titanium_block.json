@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "antman:block/titanium_block"
+    }
+  }
+}
