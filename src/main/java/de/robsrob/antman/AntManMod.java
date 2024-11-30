@@ -2,8 +2,11 @@ package de.robsrob.antman;
 
 import com.mojang.logging.LogUtils;
 import de.robsrob.antman.block.ModBlocks;
+import de.robsrob.antman.entity.ModEntities;
 import de.robsrob.antman.item.ModCreativeModeTabs;
 import de.robsrob.antman.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,6 +40,7 @@ public class AntManMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
@@ -53,6 +57,9 @@ public class AntManMod
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.TITANIUM_INGOT);
         }
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.THROWABLE_DISC);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -68,6 +75,7 @@ public class AntManMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.THROWABLE_DISC.get(), ThrownItemRenderer::new);
         }
     }
 }
