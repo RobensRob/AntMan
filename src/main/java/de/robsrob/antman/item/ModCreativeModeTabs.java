@@ -23,6 +23,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.TITANIUM_BLOCK.get());
                         pOutput.accept(ModItems.BOTTLE_OF_PYM_PARTICLES.get());
                         pOutput.accept(ModItems.THROWABLE_DISC.get());
+                        pOutput.accept(ModItems.SHRINK_DISC.get());
+                        pOutput.accept(ModItems.GROW_DISC.get());
                     })
                     .build());
 

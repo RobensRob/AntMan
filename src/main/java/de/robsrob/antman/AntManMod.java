@@ -59,6 +59,8 @@ public class AntManMod
         }
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.THROWABLE_DISC);
+            event.accept(ModItems.SHRINK_DISC);
+            event.accept(ModItems.GROW_DISC);
         }
     }
 

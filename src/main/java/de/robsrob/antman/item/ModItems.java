@@ -1,6 +1,8 @@
 package de.robsrob.antman.item;
 
 import de.robsrob.antman.AntManMod;
+import de.robsrob.antman.item.custom.GrowDiscItem;
+import de.robsrob.antman.item.custom.ShrinkDiscItem;
 import de.robsrob.antman.item.custom.ThrowableDiscItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +19,8 @@ public class ModItems {
     public static final RegistryObject<Item> BOTTLE_OF_PYM_PARTICLES = ITEMS.register("bottle_of_pym_particles", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> THROWABLE_DISC = ITEMS.register("throwable_disc", () -> new ThrowableDiscItem(new Item.Properties()));
+    public static final RegistryObject<Item> SHRINK_DISC = ITEMS.register("shrink_disc", () -> new ShrinkDiscItem(new Item.Properties()));
+    public static final RegistryObject<Item> GROW_DISC = ITEMS.register("grow_disc", () -> new GrowDiscItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
